@@ -1,4 +1,2 @@
-# Jogo
- Meu primeiro jogo!
-
-Bora!
+# THE GAME
+ Não é muito, mas foi o que consegui fazer!
