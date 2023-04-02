@@ -5,21 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE GAME</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body onload="startGame()">
+    <div id="author">
+        <h1>THE GAME</h1><SPan>BY UNIFAA</SPan>
+    </div>
     <style>
         canvas {
-    border: 2px solid #000000;
-    background-color: #ffffff;
+            margin-top: 200px;
+            margin-left: 300px;
+    border: 3px solid #ff0101;
+    background-color: #000000;
 }
     </style>
     <script>
        var myGamePiece;
        var myObstacles = [];
        var myScore;
+
        function startGame() {
-        myGamePiece = new component(30, 30, "red", 10, 120);
-        myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+        myGamePiece = new component(30, 30, "white", 10, 120);
+        myScore = new component("30px", "Consolas", "white", 280, 40, "text");
         myGameArea.start();
     }
     var myGameArea = {
@@ -102,8 +109,8 @@
             minGap = 50;
             maxGap = 200;
             gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-            myObstacles.push(new component(10, height, "green", x, 0));
-            myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+            myObstacles.push(new component(10, height, "yellow", x, 0));
+            myObstacles.push(new component(10, x - height - gap, "yellow", x, height + gap));
         }
         for (i = 0; i < myObstacles.length; i += 1) {
             myObstacles[i].speedX = -1;
